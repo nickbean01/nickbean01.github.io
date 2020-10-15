@@ -20,3 +20,11 @@ https://github.com/getpelican/pelican-themes/issues/482#issuecomment-346653264
 >     'extensions': ['jinja2.ext.i18n'],
 > }
 > ```
+
+## Publish Changes
+
+```
+pelican content -o output -s publishconf.py
+ghp-import -m "Generate Pelican site" --no-jekyll -b master output
+git push origin master
+```
