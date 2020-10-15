@@ -30,5 +30,19 @@ SOCIAL = (('You can add links in your config file', '#'),
 
 DEFAULT_PAGINATION = 10
 
+USE_FOLDER_AS_CATEGORY = True
+
 # Uncomment following line if you want document-relative URLs when developing
 #RELATIVE_URLS = True
+
+# NON-DEFAULTS
+
+STATIC_PATHS = ['img']
+
+PLUGIN_PATHS = ['./pelican-plugins', ]
+PLUGINS = ['i18n_subsites', ]
+JINJA_ENVIRONMENT = {
+    'extensions': ['jinja2.ext.i18n'],
+}
+
+THEME = './themes/pelican-bootstrap3'
